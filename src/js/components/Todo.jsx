@@ -51,8 +51,15 @@ const Todo = () => {
             </li>
           ))}
         </ul>
-        <div className="todo-app__footer">
+      
+      </div>
+      <div class="stack-wrapper">
+        <div class="card card--layer3"></div>
+        <div class="card card--layer2"></div>
+        <div class="card card--main">
+            <div className="todo-app__footer">
           Tareas pendientes: {todos.length}
+        </div>
         </div>
       </div>
     </div>

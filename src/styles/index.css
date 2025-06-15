@@ -18,10 +18,51 @@ body {
   font-weight: 100;
 }
 .todo-app__box {
-  background-color: #fff;
   width: 500px;
+  background: white;
+  padding: 1rem;
+  border-radius: 3px;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+/* Cajitas apiladas */
+.stack-wrapper {
+  position: relative;
+  width: 500px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card--layer3 {
+  width: 94%;
+  top: 10px;
+  z-index: 1;
+}
+.card--layer2 {
+  width: 97%;
+  top: 5px;
+  z-index: 2;
+}
+.card--main {
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  padding: 1rem;
 }
 
 .todo-list__item {
@@ -55,7 +96,6 @@ body {
 }
 .todo-app__footer {
   text-align: left;
-  padding: 0.7rem 1rem;
   font-size: 0.8rem;
   color: #aaa;
   font-weight: 100;
