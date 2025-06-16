@@ -1,6 +1,5 @@
 import React from "react";
 
-//create your first component
 const Todo = () => {
   // Crear un estado para almacenar los elementos de la lista de tareas
   const [todos, setTodos] = React.useState([]);
@@ -46,20 +45,17 @@ const Todo = () => {
                 className="todo-list__remove"
                 onClick={() => removeTodo(index)}
               >
-                <i class="fa-solid fa-xmark"></i>
+                <i className="fa-solid fa-xmark"></i>
               </span>
             </li>
           ))}
         </ul>
-      
       </div>
-      <div class="stack-wrapper">
-        <div class="card card--layer3"></div>
-        <div class="card card--layer2"></div>
-        <div class="card card--main">
-            <div className="todo-app__footer">
-          Tareas pendientes: {todos.length}
-        </div>
+      <div className="stack-wrapper">
+        <div className="card card--layer3"></div>
+        <div className="card card--layer2"></div>
+        <div className="card card--main todo-app__footer">
+          <p>Tareas pendientes: {todos.length}</p>
         </div>
       </div>
     </div>

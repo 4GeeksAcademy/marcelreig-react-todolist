@@ -4,7 +4,7 @@ body {
   font-weight: 100;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   font-family: sans-serif;
   background-color: #f5f5f5;
   color: #333;
@@ -18,36 +18,32 @@ body {
   font-weight: 100;
 }
 .todo-app__box {
-  width: 500px;
+  max-width: 500px;
   background: white;
-  padding: 1rem;
   border-radius: 3px;
   border: 1px solid #ccc;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: none;
+  padding-bottom: 1rem;
 }
 /* Cajitas apiladas */
 .stack-wrapper {
   position: relative;
-  width: 500px;
-  height: 40px;
+  max-width: 500px;
+  height: 50px;
   margin: 0 auto;
 }
-
 .card {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   height: 100%;
-  background: white;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-
 .card--layer3 {
   width: 94%;
   top: 10px;
@@ -64,34 +60,42 @@ body {
   z-index: 3;
   padding: 1rem;
 }
-
+ul.todo-list {
+  padding: 0;
+  margin: 0;
+}
 .todo-list__item {
+  color: #757575;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 100;
   font-size: 1.5rem;
-  padding: 1.2rem 1rem;
+  padding: 1.2rem 3rem;
   border-bottom: 1px solid #eee;
   transition: background 0.2s ease-in-out;
 }
-.todo-list__item:hover {
-  background: rgba(0, 0, 0, 0.03);
-}
 .todo-list__remove {
-  color: #8d6e63;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  display: none;
+  color: #A1887F;
   font-size: 1.2rem;
+  cursor: pointer;
+}
+.todo-list__item:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+.todo-list__item:hover .todo-list__remove {
+  display: block;
 }
 .todos__input {
+  color: #757575;
   width: 100%;
   font-weight: 100;
   font-size: 1.5rem;
   padding: 1.2rem 1rem;
-  border-bottom: 1px solid #eee;
   border: 0;
-  border-radius: 0;
+  border-radius: 3px;
+  border-bottom: 1px solid #eee;
   padding-left: 3rem;
 }
 .todo-app__footer {
